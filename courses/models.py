@@ -1,5 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.contrib.contenttypes.models import ContentType
+from django.contrib.contenttypes.fields import GenericForeignKey
 
 """
 we have a Subject the contain courses and every course contain modules
@@ -19,6 +21,16 @@ we have a Subject the contain courses and every course contain modules
         1. course (a course)
         2. title
         3. description 
+-----------------------
+the Content model can be of different types so we use a generic relation to point to the Content object 
+    - Content:
+        1. module (belongs to a module)
+        2. content_type (foreign key to the ContentType) --> used for the generic relation
+        3. object_id (th e key for the elated object)
+        4. item (does not exists in the database but build on the other columns)
+    **note: learn more about generic relation in Django**
+-----------------------
+
 """
 
 
@@ -55,4 +67,12 @@ class Module(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class Content(models.Model):
+    module = models.ForeignKey(Module, related_name="contents", on_delete=models.CASCADE)
+    content_type = models.ForeignKey(ContentType, on_delete=models.CASCADE)
+    object_id = models.PositiveIntegerField()
+    item = GenericForeignKey('content_type', 'object_id')
+
 
