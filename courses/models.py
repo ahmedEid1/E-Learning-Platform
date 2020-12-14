@@ -2,7 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.contrib.contenttypes.models import ContentType
 from django.contrib.contenttypes.fields import GenericForeignKey
-
+from .fields import OrderField
 """
 we have a Subject the contain courses and every course contain modules
     - subject has:
@@ -21,6 +21,7 @@ we have a Subject the contain courses and every course contain modules
         1. course (a course)
         2. title
         3. description 
+        4. order
 -----------------------
 the Content model can be of different types so we use a generic relation to point to the Content object 
     - Content:
@@ -28,6 +29,7 @@ the Content model can be of different types so we use a generic relation to poin
         2. content_type (foreign key to the ContentType) --> used for the generic relation
         3. object_id (th e key for the elated object)
         4. item (does not exists in the database but build on the other columns)
+        5. order
     **note: learn more about generic relation in Django**
 -----------------------
 the ItemBase model is an abstract model that is inherited in the content types (text, file, image, video)
@@ -69,9 +71,13 @@ class Module(models.Model):
     course = models.ForeignKey(Course, related_name="modules", on_delete=models.CASCADE)
     title = models.CharField(max_length=200)
     description = models.TextField(blank=True)
+    order = OrderField(blank=True, for_fields=['course'])
+
+    class Meta:
+        ordering = ['order']
 
     def __str__(self):
-        return self.title
+        return f'{self.order}, {self.title}'
 
 
 class Content(models.Model):
@@ -80,6 +86,10 @@ class Content(models.Model):
         'text', 'video', 'image', 'file')})
     object_id = models.PositiveIntegerField()
     item = GenericForeignKey('content_type', 'object_id')
+    order = OrderField(blank=True, for_fields=['module'])
+
+    class Meta:
+        ordering = ['order']
 
 
 class ItemBase(models.Model):
