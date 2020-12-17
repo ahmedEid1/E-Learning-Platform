@@ -10,7 +10,10 @@
 </head>
 <body>
     <div id="header">
-        <a href="/" class="logo">E-learning</a>
+        <a href="/" class="logo">E-lea
+            <img src="{% static 'imgs/logo.png' %}" width="50px">
+            rning
+        </a>
         <ul class="menu">
             {% if request.user.is_authenticated %}
                 <li><a href="{% url 'login' %}">Sign In</a></li>

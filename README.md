@@ -15,6 +15,10 @@
 <td><b>Custom field</b></td>
 <td>When you create custom model fields, make them generic. Avoid hardcoding data that depends on a specific model or field. Your field should work in any model.</td>
 </tr>
+<tr>
+<td><b>Mixins</b></td>
+<td>special kind of multiple inheritance for a class. You can use them to provide common discrete functionality that, when added to other mixins, allows you to define the behavior of a class</td>
+</tr>
 </tbody>
 </table>
 
