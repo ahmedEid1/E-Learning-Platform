@@ -1,7 +1,14 @@
 {% extends 'base.html' %}
+{% load static %}
+
 {% block title %}Log-In{% endblock %}
+{% block style %}
+    <link href="{% static 'css/base.css' %}" rel="stylesheet">
+    <link href="{% static 'css/login.css' %}" rel="stylesheet">
+{% endblock %}
+
 {% block content %}
-    <h1>Log In</h1>
+    <h1>Log-In</h1>
     <div class="module">
         {% if form.errors %}
             <p>your username or password is wrong please try again.</p>

@@ -1,6 +1,5 @@
 <h2>TODO</h2>
 <ul>
-<li>download postgresql</li>
 </ul>
 <hr>
 
