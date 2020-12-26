@@ -16,9 +16,9 @@
         </a>
         <ul class="menu">
             {% if request.user.is_authenticated %}
-                <li><a href="{% url 'login' %}">Sign In</a></li>
+                  <li><a href="{% url 'logout' %}">Sign Out</a></li>
             {% else %}
-                <li><a href="{% url 'logout' %}">Sign Out</a></li>
+                  <li><a href="{% url 'login' %}">Sign In</a></li>
             {% endif %}
         </ul>
     </div>

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Delete Course{% endblock %}
+
+{% block style %}
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+{% endblock %}
+
+{% block content %}
+    <h1>Deleting the course {{ object.title }}</h1>
+
+    <div class="module">
+        <form method="post">
+            {% csrf_token %}
+            <p>you sure about deleting "{{ object }}" ?!!</p>
+            <p><input type="submit" value="Confirm"></p>
+        </form>
+
+    </div>
+{% endblock %}

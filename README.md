@@ -22,6 +22,13 @@
 </tbody>
 </table>
 
+---------
+- Django's authentication framework includes a permission system that allows you to assign permissions to users and groups
+    - Users that have is_superuser set to True have all permissions automatically.
+    
+
+---------
+
 <hr>
 <h3>Technologies</h3>
 <ul>
