@@ -1,33 +1,17 @@
 <h2>TODO</h2>
-<ul>
-</ul>
+
+- complete the content view by :
+  - module_content_list URL
+  - a view for deleting content
+
 <hr>
 
 <h2>apps</h2>
-<h3>courses</h3>
+- courses
 <p></p>
 <hr>
 
-<h3><u>Notes : </u></h3>
-<table>
-<tbody>
-<tr>
-<td><b>Custom field</b></td>
-<td>When you create custom model fields, make them generic. Avoid hardcoding data that depends on a specific model or field. Your field should work in any model.</td>
-</tr>
-<tr>
-<td><b>Mixins</b></td>
-<td>special kind of multiple inheritance for a class. You can use them to provide common discrete functionality that, when added to other mixins, allows you to define the behavior of a class</td>
-</tr>
-</tbody>
-</table>
 
----------
-- Django's authentication framework includes a permission system that allows you to assign permissions to users and groups
-    - Users that have is_superuser set to True have all permissions automatically.
-    
-
----------
 
 <hr>
 <h3>Technologies</h3>
