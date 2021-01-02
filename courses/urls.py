@@ -6,5 +6,8 @@ urlpatterns = [
     path('create/', views.CourseCreateView.as_view(), name='course_create'),
     path('<pk>/edit/', views.CourseUpdateView.as_view(), name='course_edit'),
     path('<pk>/delete/', views.CourseDeleteView.as_view(), name='course_delete'),
+    # --handling the course modules____
+    path('<pk>/module/', views.CourseModuleUpdateView.as_view(), name='course_module_update')
+
 
 ]
