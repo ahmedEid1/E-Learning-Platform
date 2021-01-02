@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}{% endblock %}
+
+{% block style %}
+    <link href="{% static 'css/base.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+    <h1>
+        {% if object %}
+            Edit {{ object.title }}
+        {% else %}
+            Add a new content
+        {% endif %}
+    </h1>
+
+    <div class="module">
+        <form action="" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <p><input type="submit" value="Save Content"></p>
+        </form>
+    </div>
+{% endblock %}
