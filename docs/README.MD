@@ -39,4 +39,8 @@
         - `apps.get_model(app_label='courses', model_name=model_name)`
 -----
 
+#### You can get the model name for an object from the model's Meta class by accessing the object's _meta attribute
+- Django doesn't allow accessing variables or attributes starting with an underscore in templates to prevent retrieving private attributes or calling private methods
+    - You can solve this by writing a custom template filter.
+    
 
