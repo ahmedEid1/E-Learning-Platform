@@ -13,9 +13,9 @@
 
 
 
-<hr>
-<h3>Technologies</h3>
-<ul>
-<li>Django</li>
-<li>Jquery</li>
-</ul>
+---
+### Technologies
+- Django
+- django-braces
+- Jquery
+- jQuery UI
