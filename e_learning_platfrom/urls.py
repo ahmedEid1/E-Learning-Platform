@@ -27,5 +27,8 @@ urlpatterns = [
     # ---Course Views
     path('course/', include('courses.urls')),
     path('', CourseListView.as_view(), name='course_list'),
+    # ---Student Views
+    path('students/', include('students.urls')),
+
 
 ]
