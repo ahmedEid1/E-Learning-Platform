@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}{{ object.title }}{% endblock %}
+{% block style %}<link rel="stylesheet" href="{% static 'css/base.css' %}">{% endblock %}
+
+{% block content %}
+    {% with subject=object.subject %}
+        <h1>{{ object.title }}</h1>
+        <div class="module">
+            <p>
+                <a href="{% url 'course_list_subject' subject.slug %}">{{ subject.title }}</a>
+                <br>
+                {{ object.modules.count }} Modules
+                <br>
+                Instructor: {{ object.owner }}
+            </p>
+            {{ object.overview|linebreaks }}
+        </div>
+    {% endwith %}
+{% endblock %}
