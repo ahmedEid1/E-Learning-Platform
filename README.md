@@ -17,5 +17,6 @@
 ### Technologies
 - Django
 - django-braces
+- django-embed-video
 - Jquery
 - jQuery UI
