@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load cache %}
 {% load static %}
 {% block title %}{{ object.title }}{% endblock %}
 {% block style %}<link rel="stylesheet" href="{% static 'css/base.css' %}">{% endblock %}
@@ -24,11 +25,13 @@
         </ul>
     </div>
     <div class="module">
+    {% cache 300 module_content_s module%}
         {% for content in module.contents.all %}
             {% with item=content.item %}
                 <h3>{{ item.title }}</h3>
                 {{ item.render }}
             {% endwith %}
         {% endfor %}
+    {% endcache %}
     </div>
 {% endblock %}

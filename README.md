@@ -18,5 +18,9 @@
 - Django
 - django-braces
 - django-embed-video
+- django-memcache-status
 - Jquery
 - jQuery UI
+- MemCache
+  - python binding: 
+      `python-memcached`
