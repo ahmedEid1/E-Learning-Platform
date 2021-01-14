@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'embed_video',
-    'memcache_status'
+    'memcache_status',
+    'rest_framework',
 
 ]
 
@@ -149,7 +150,9 @@ CACHES = {
 # CACHE_MIDDLEWARE_KEY_PREFIX = 'EL'
 
 
-
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [ 'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly' ]
+}
 
 
 

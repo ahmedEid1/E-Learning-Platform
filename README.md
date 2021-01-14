@@ -19,8 +19,13 @@
 - django-braces
 - django-embed-video
 - django-memcache-status
+- Django REST framework 
 - Jquery
 - jQuery UI
 - MemCache
   - python binding: 
       `python-memcached`
+    
+
+## TODO ::
+- pip install djangorestframework

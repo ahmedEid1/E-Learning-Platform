@@ -31,6 +31,8 @@ urlpatterns = [
     path('', CourseListView.as_view(), name='course_list'),
     # ---Student Views
     path('students/', include('students.urls')),
+    # ---API >> Courses
+    path('api/', include('courses.api.urls', namespace='api/')),
 
 
 ]
