@@ -8,6 +8,8 @@ from rest_framework.response import Response
 from rest_framework import generics
 from ..models import Subject, Course
 from .serializers import SubjectSerializer, CourseSerializer
+from .pemissions import IsEnrolled
+from .serializers import CourseWithContentSerializer
 
 
 class SubjectListView(generics.ListAPIView):
@@ -23,6 +25,13 @@ class SubjectDetailView(generics.RetrieveAPIView):
 class CourseViewSet(viewsets.ReadOnlyModelViewSet):
     queryset = Course.objects.all()
     serializer_class = CourseSerializer
+
+    @action(detail=True, methods=['get'],
+           serializer_class=CourseWithContentSerializer,
+           authentication_classes=[BasicAuthentication],
+           permission_classes=[IsAuthenticated, IsEnrolled])
+    def contents(self, request, *args, **kwargs):
+        return self.retrieve(request, *args, **kwargs)
 
     @action(detail=True, methods=['post'],
             authentication_classes=[BasicAuthentication],
