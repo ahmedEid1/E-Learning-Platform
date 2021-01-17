@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'chat.apps.ChatConfig',
     'students.apps.StudentsConfig',
     'courses.apps.CoursesConfig',
     'django.contrib.admin',
@@ -42,6 +43,7 @@ INSTALLED_APPS = [
     'embed_video',
     'memcache_status',
     'rest_framework',
+    'channels',
 
 ]
 
@@ -155,7 +157,7 @@ REST_FRAMEWORK = {
 }
 
 
-
+ASGI_APPLICATION = 'e_learning_platfrom.routing.application'
 
 
 

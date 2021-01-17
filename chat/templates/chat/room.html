@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Chat room for {{ course.title }}{% endblock %}
+
+{% block style %}<link rel="stylesheet" href="{% static 'css/base.css' %}">{% endblock %}
+
+{% block content %}
+    <div id="chat"></div>
+   <div>
+        <input  type="text">
+       <input  type="submit" value="Send">
+    </div>
+{% endblock %}
+
+
+{% block domready %}
+
+{% endblock %}

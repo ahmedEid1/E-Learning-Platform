@@ -25,7 +25,4 @@
 - MemCache
   - python binding: 
       `python-memcached`
-    
-
-## TODO ::
-- pip install djangorestframework
+- channels    

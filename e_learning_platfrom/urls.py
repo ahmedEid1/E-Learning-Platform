@@ -33,7 +33,7 @@ urlpatterns = [
     path('students/', include('students.urls')),
     # ---API >> Courses
     path('api/', include('courses.api.urls', namespace='api/')),
-
+    path('chat/', include('chat.urls', namespace='chat/')),
 
 ]
 
