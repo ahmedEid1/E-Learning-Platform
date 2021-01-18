@@ -25,4 +25,6 @@
 - MemCache
   - python binding: 
       `python-memcached`
-- channels    
+- channels
+- Redis 
+- channels-redis
