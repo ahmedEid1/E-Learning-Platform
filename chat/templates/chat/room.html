@@ -20,8 +20,14 @@
     chatSocket.onmessage = function(e) {
         var data = JSON.parse(e.data);
         var message = data.message;
+        var dateOptions = {hour: 'numeric', minute: 'numeric', hour12: true};
+        var datetime = new Date(data['datetime']).toLocaleString('en', dateOptions);
+        var isMe = data.user === '{{ request.user }}';
+        var source = isMe ? 'me' : 'other';
+        var name = isMe ? 'Me' : data.user;
         var $chat = $('#chat');
-        $chat.append('<div class="message">' + message + '</div>');
+        $chat.append('<div class="message">' + '<strong>' + name + '</strong> ' +
+                            '<span class="date">' + datetime + '</span><br>' + message + '</div>');
         $chat.scrollTop($chat[0].scrollHeight);
     };
     chatSocket.onclose = function(e) {

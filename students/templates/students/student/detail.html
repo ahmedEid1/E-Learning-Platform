@@ -23,6 +23,12 @@
                 <li>No Modules Yet.</li>
             {% endfor %}
         </ul>
+
+        <h3>
+            <a href="{% url 'chat:course_chat_room' object.id %}">
+                Course Chat Room
+            </a>
+        </h3>
     </div>
     <div class="module">
     {% cache 300 module_content_s module%}
