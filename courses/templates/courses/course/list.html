@@ -13,17 +13,17 @@
 {% endblock %}
 
 {% block content %}
-    <h1>
+    <div class="page-title">
         {% if subject %}
             {{ subject.title }} Courses
         {% else %}
             All Courses
         {% endif %}
-    </h1>
+    </div>
 
-    <div class="contents">
-        <h3>Subjects</h3>
-        <ul id="modules">
+    <div class="contents hover-style">
+        <h3 class="my_button">Subjects</h3>
+        <ul id="course-modules">
             <li {% if not subject %}class="selected" {% endif %}>
                 <a href="{% url 'course_list' %}">All</a>
             </li>
@@ -43,7 +43,8 @@
     <div class="module">
         {% for course in courses %}
             {% with subject=course.subject %}
-                <h3>
+                <div class="hover-style module-content">
+                    <h3>
                     <a href="{% url 'course_detail' course.slug %}">
                         {{ course.title }}
                     </a>
@@ -52,10 +53,11 @@
                 <p>
                     <a href="{% url 'course_list_subject' subject.slug %}">{{ subject }}</a>
                     <br>
-                    {{ course.total_modules }} Modules.
+                    >>> {{ course.total_modules }} Modules
                     <br>
-                    Instructor: {{ course.owner }}
+                    <b>Instructor : </b> {{ course.owner }}
                 </p>
+                </div>
             {% endwith %}
         {% endfor %}
     </div>
