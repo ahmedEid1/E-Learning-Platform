@@ -68,7 +68,7 @@
 - ### `course/`
     - `include('courses.urls')` : 
         - all urls under the courses' app start with `course/`
-
+  
 - #### `mine/` (Login Require)
     - list of the courses the user (teacher) created
       - can edit the course, 
@@ -79,7 +79,7 @@
         
     - view : `ManageCourseListView`
     - template : `courses/manage/course/list.html`
----
+-----
 
    
 
