@@ -1,37 +1,30 @@
-html, body {
-    margin: 0;
-    height: 100%;
-}
-body {
-    margin: 0;
-    padding: 0;
-    background: rgb(9,121,59);
-    background: linear-gradient(162deg, rgba(9,121,59,1) 0%, rgba(0,255,102,1) 98%);
-    font-family: sans-serif;
-}
-
-#content {
-    width: 100px;
-    height: 100px;
-    position: absolute;
-    top: calc(20%);
-    left: calc(50% - 300px);
-
-}
-
-h1 {
-    background: inherit;
-    font-weight:  bold;
-    border-radius: 20%;
-    font-family: sans-serif;
-    text-align: center;
-}
-
 .module {
-    background: rgb(33,222,48);
-    background: radial-gradient(circle, rgba(33,222,48,0.9671218829328606) 0%, rgba(19,217,141,1) 100%);
-    border-radius: 25px;
+    margin: 2% 30%;
+    border: 3px dashed black;
+    background: #aaaaaa;
+    color: snow;
+}
+
+.form {
+    color: black;
+    background: #cccccc;
+    padding: 15px;
+}
+
+.form p {
+    text-align: center;
+    align-items: center;
     margin: auto;
-    border: 3px solid green;
+    padding-left: 12px;
+}
+
+
+.submit:hover {
+    border-radius: 10px;
     padding: 10px;
+    background: white;
+    letter-spacing: 1px;
+    box-shadow: 5px 40px 10px rgba(0,0,0,0.57);
+    transition: all 0.4s ease 0s;
+    color: black;
 }

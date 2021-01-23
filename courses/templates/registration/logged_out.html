@@ -7,5 +7,10 @@
 
 
 {% block content %}
-    <p>you have been successfully logged out <br> 	&#8594; You can <a href="{% url 'login' %}">Log In again</a>.</p>
+    <div class="module" style="margin: 0 30%; padding: 10px;">
+        you have been successfully logged out
+        <div class="hover-style" style="padding: 5px;">
+            &#8594; You can <a href="{% url 'login' %}">Log In again</a>.
+        </div>
+    </div>
 {% endblock %}

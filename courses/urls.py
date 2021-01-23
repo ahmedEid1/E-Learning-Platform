@@ -2,6 +2,7 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
+    # ...list of the current teacher courses owns(Done)
     path('mine/', views.ManageCourseListView.as_view(), name='manage_course_list'),
     path('create/', views.CourseCreateView.as_view(), name='course_create'),
     path('<pk>/edit/', views.CourseUpdateView.as_view(), name='course_edit'),
@@ -17,7 +18,7 @@ urlpatterns = [
          name='module_content_delete'),
     path('module/<int:module_id>/', views.ModuleContentListView.as_view(),
          name='module_content_list'),
-    #--re-ording----
+    # --re-ording----
     path('module/order/', views.ModuleOrderView.as_view(),
          name='module_order'),
     path('content/order/', views.ContentOrderView.as_view(),

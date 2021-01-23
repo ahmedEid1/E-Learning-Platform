@@ -8,19 +8,19 @@
 {% endblock %}
 
 {% block content %}
-    <h1>Log-In</h1>
+    <div class="page-title">Log-In</div>
     <div class="module">
         {% if form.errors %}
-            <p>your username or password is wrong please try again.</p>
+            <p class="hover-style">your username or password is wrong please try again.</p>
         {% else %}
-            <p>Please Sign In with the following form:</p>
+            <p class="hover-style">Please Sign In with the following form:</p>
         {% endif %}
-        <div class="login-form">
+        <div class="form">
             <form action="{% url 'login' %}" method="post">
                 {{ form.as_p }}
                 {% csrf_token %}
                 <input type="hidden" name="next" value="{{ next }}">
-                <p><input type="submit" value="Log-In"></p>
+                <p ><input class="submit" type="submit" value="Log-In"></p>
             </form>
         </div>
     </div>
