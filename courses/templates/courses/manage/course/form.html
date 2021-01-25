@@ -14,20 +14,20 @@
 {% endblock %}
 
 {% block content %}
-    <h1>
+    <div class="page-title">
         {% if object %}
         Edit {{ object.title }}
     {% else %}
         Create a new course
     {% endif %}
-    </h1>
+    </div>
 
-    <div class="module">
-        <h2>Course info</h2>
+    <div class="module shadow-style" style="margin: 20px 30%;">
+        <h2 class="shadow-style">Course Info. </h2>
         <form method="post">
             {{ form.as_p }}
             {% csrf_token %}
-            <p><input type="submit" value="Save Course"></p>
+            <p><input class="hover-style" style="color: black" type="submit" value="Save Course"></p>
         </form>
     </div>
 {% endblock %}

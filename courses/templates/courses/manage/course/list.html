@@ -5,9 +5,9 @@
 {% block style %}<link rel="stylesheet" href="{% static 'css/base.css' %}">{% endblock %}
 
 {% block content %}
-    <h1>My Courses</h1>
+    <div class="page-title">My Courses</div>
 
-    <div class="module">
+    <div class="module shadow-style" style="padding: 30px; margin: 20px 30%;">
         {% for course in object_list %}
             <div class="course-info">
                 <h3>{{ course.title }}</h3>
@@ -24,7 +24,7 @@
         {% empty %}
             <p>You don`t have any courses yet</p>
         {% endfor %}
-        <a href="{% url 'course_create' %}" class="button">Create New Course</a>
+        <a style="display: inline-block; margin: 10px;" href="{% url 'course_create' %}" class="button">Create New Course</a>
 
     </div>
 {% endblock %}

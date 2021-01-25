@@ -27,7 +27,7 @@ urlpatterns = [
     path('accounts/logout/', auth_views.LogoutView.as_view(), name='logout'),
     # ---admin panel(done)
     path('admin/', admin.site.urls),
-    # ---Course Views (current)
+    # ---Course Views (done)
     path('course/', include('courses.urls')),
     # ---Student Views
     path('students/', include('students.urls')),

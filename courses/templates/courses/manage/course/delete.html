@@ -8,13 +8,13 @@
 {% endblock %}
 
 {% block content %}
-    <h1>Deleting the course {{ object.title }}</h1>
+    <div class="page-title">Deleting the course {{ object.title }}</div>
 
-    <div class="module">
+    <div class="module shadow-style" style="margin: 20px 30%">
         <form method="post">
             {% csrf_token %}
             <p>you sure about deleting "{{ object }}" ?!!</p>
-            <p><input type="submit" value="Confirm"></p>
+            <p><input class="hover-style" style="color: white; background: red" type="submit" value="Confirm"></p>
         </form>
 
     </div>

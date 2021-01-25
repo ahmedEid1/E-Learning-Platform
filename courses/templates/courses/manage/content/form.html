@@ -8,19 +8,19 @@
 {% endblock %}
 
 {% block content %}
-    <h1>
+    <div class="page-title">
         {% if object %}
             Edit {{ object.title }}
         {% else %}
             Add a new content
         {% endif %}
-    </h1>
+    </div>
 
-    <div class="module">
+    <div class="module shadow-style" style="margin: 10px 30%">
         <form action="" method="post" enctype="multipart/form-data">
             {% csrf_token %}
             {{ form.as_p }}
-            <p><input type="submit" value="Save Content"></p>
+            <p><input class="hover-style" style="color: black;" type="submit" value="Save Content"></p>
         </form>
     </div>
 {% endblock %}

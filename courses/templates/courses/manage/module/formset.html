@@ -9,14 +9,14 @@
 {% endblock %}
 
 {% block content %}
-    <h1>Edit {{ course.title }}</h1>
-    <div class="module">
-        <h2>Course Modules</h2>
-        <form method="post">
+    <div class="page-title">Edit {{ course.title }}</div>
+    <div class="module shadow-style" style="margin: 20px 30%;">
+        <h2 class="shadow-style">Course Modules</h2>
+        <form style="padding: 10px; margin: 10px;" method="post">
             {% csrf_token %}
             {{ formset }}
             {{ formset.management_form }}
-            <input type="submit" value="Save Module">
+            <input class="hover-style" style="color: #333333" type="submit" value="Save Module">
         </form>
     </div>
 {% endblock %}
