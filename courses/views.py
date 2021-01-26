@@ -1,4 +1,4 @@
-from django.core.cache import cache
+# from django.core.cache import cache   # the cache is stopped
 from django.views.generic.detail import DetailView
 from django.db.models import Count
 from braces.views import CsrfExemptMixin, JsonRequestResponseMixin
@@ -169,25 +169,25 @@ class CourseListView(TemplateResponseMixin, View):
     template_name = 'courses/course/list.html'
 
     def get(self, request, subject=None):
-        subjects = cache.get('all_subjects')
-        if not subjects:
-            subjects = Subject.objects.annotate(total_courses=Count('courses'))
-            cache.set('all_subjects', subjects)
+        # subjects = cache.get('all_subjects')
+        # if not subjects:
+        subjects = Subject.objects.annotate(total_courses=Count('courses'))
+            # cache.set('all_subjects', subjects)
 
         all_courses = Course.objects.annotate(total_modules=Count('modules'))
 
         if subject:
             subject = get_object_or_404(Subject, slug=subject)
-            key = f'subject_{subject.id}_courses'
-            courses = cache.get(key)
-            if not courses:
-                courses = all_courses.filter(subject=subject)
-                cache.set(key, courses)
+            # key = f'subject_{subject.id}_courses'
+            # courses = cache.get(key)
+            # if not courses:
+            courses = all_courses.filter(subject=subject)
+                # cache.set(key, courses)
         else:
-            courses = cache.get('all_courses')
-            if not courses:
-                courses = all_courses
-                cache.set('all_courses', courses)
+            # courses = cache.get('all_courses')
+            # if not courses:
+            courses = all_courses
+                # cache.set('all_courses', courses)
 
         return self.render_to_response({
             'subjects': subjects,

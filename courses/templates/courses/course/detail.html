@@ -5,8 +5,8 @@
 
 {% block content %}
     {% with subject=object.subject %}
-        <h1>{{ object.title }}</h1>
-        <div class="module">
+        <div class="page-title">{{ object.title }}</div>
+        <div class="module shadow-style" style="margin: 10px 30%">
             <p>
                 <a href="{% url 'course_list_subject' subject.slug %}">{{ subject.title }}</a>
                 <br>
@@ -22,7 +22,7 @@
                     <input type="submit" value="Enroll now">
                 </form>
             {% else %}
-                <a class="button" href="{% url 'student_registration' %}">
+                <a class="button hover-style" style="color: black; padding: 10px" href="{% url 'student_registration' %}">
                     Register to Enroll
                 </a>
             {% endif %}

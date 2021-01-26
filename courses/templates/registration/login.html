@@ -20,6 +20,7 @@
                 {{ form.as_p }}
                 {% csrf_token %}
                 <input type="hidden" name="next" value="{{ next }}">
+                <div class="hover-style"><a href="{% url 'student_registration' %}">Create new account ?</a></div>
                 <p ><input class="submit" type="submit" value="Log-In"></p>
             </form>
         </div>

@@ -21,15 +21,15 @@ from django.contrib.auth import views as auth_views
 from courses.views import CourseListView
 
 urlpatterns = [
-    path('', CourseListView.as_view(), name='course_list'),
     # --- auth routes(done)
     path('accounts/login/', auth_views.LoginView.as_view(), name='login'),
     path('accounts/logout/', auth_views.LogoutView.as_view(), name='logout'),
     # ---admin panel(done)
     path('admin/', admin.site.urls),
-    # ---Course Views (done)
+    # ---Course Views (Done)
     path('course/', include('courses.urls')),
-    # ---Student Views
+    path('', CourseListView.as_view(), name='course_list'),
+    # ---Student Views (Current)
     path('students/', include('students.urls')),
     # ---API >> Courses
     path('api/', include('courses.api.urls', namespace='api/')),

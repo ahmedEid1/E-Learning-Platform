@@ -1,11 +1,11 @@
 {% extends 'base.html' %}
-{% load cache %}
+{#{% load cache %}#}
 {% load static %}
 {% block title %}{{ object.title }}{% endblock %}
 {% block style %}<link rel="stylesheet" href="{% static 'css/base.css' %}">{% endblock %}
 
 {% block content %}
-    <h1>{{ module.title }}</h1>
+    <div class="page-title">{{ module.title }}</div>
     <div class="contents">
         <h3>Modules</h3>
         <ul id="modules">
@@ -24,20 +24,26 @@
             {% endfor %}
         </ul>
 
-        <h3>
-            <a href="{% url 'chat:course_chat_room' object.id %}">
-                Course Chat Room
-            </a>
-        </h3>
+        <div>
+            <h3 class="hover-style">
+                <a href="{% url 'chat:course_chat_room' object.id %}">
+                    Course Chat Room ==>
+                </a>
+            </h3>
+
+        </div>
     </div>
-    <div class="module">
-    {% cache 300 module_content_s module%}
+    <div class="module" style="margin: 10px; background: white; border: 0px white solid ">
+{#    {% cache 300 module_content_s module%}#}
         {% for content in module.contents.all %}
             {% with item=content.item %}
-                <h3>{{ item.title }}</h3>
-                {{ item.render }}
+                <div class="module" style="border: 3px black dashed; margin: 10px">
+                    <h3 class="shadow-style" style="padding: 10px; ">{{ item.title }}</h3>
+                    {{ item.render }}
+                </div>
+
             {% endwith %}
         {% endfor %}
-    {% endcache %}
+{#    {% endcache %}#}
     </div>
 {% endblock %}

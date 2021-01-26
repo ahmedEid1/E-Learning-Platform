@@ -4,14 +4,16 @@
 {% block style %}<link rel="stylesheet" href="{% static 'css/base.css' %}">{% endblock %}
 
 {% block content%}
-    <h1>My courses</h1>
+    <div class="page-title">My courses</div>
 
-    <div class="module">
+    <div class="module shadow-style" style="margin: 10px 30%;">
         {% for course in object_list %}
+            <div class="hover-style">
             <h3>{{ course.title }}</h3>
             <p><a href="{% url 'student_course_detail' course.id %}">Access Contents</a></p>
+            </div>
         {% empty %}
-            you are not enrolled in any courses yet
+            <p class="shadow-style hover-style">you are not enrolled in any courses yet</p>
             <a href="{% url 'course_list' %}">Browse Course</a> to enroll in a course
         {% endfor %}
     </div>

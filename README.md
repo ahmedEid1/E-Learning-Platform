@@ -110,9 +110,28 @@
             - just click and hold then drag to change the order
 ----
 ----
-
-
-
+## `/students` :
+- `student.urls`
+  
+- ### `register/` :
+    - create a new user account
+    - view : StudentRegistrationView
+    - template : `students/student/registration.html`
+---
+- ### `courses/` : (Login Require)
+    - list of all the courses the user is enrolled in
+    - view : `StudentCourseListView`
+    - template : `students/student/list.htm`
+---
+- ### `courses/<course_id>/` : (Login Require)
+    - course detail page + course chat room 
+    - view : `StudentCourseDetailView`
+    - template : `students/student/detail.html`
+---
+- ### `courses/<course_id>/<module_id>` : (Login Require) 
+    - showing the contents of a course module
+    - view : `StudentCourseDetailView`
+    - template : `students/student/detail.html`
 
 
 
