@@ -131,11 +131,13 @@ input[type=submit]:hover, a.button:hover {
 }
 
 #chat {
-    top: 64px;
-    bottom:0;
+    top: 100px;
+    bottom:20%;
     position:fixed;
-    width:100%;
+    width:80%;
+    height: 60%;
     overflow-y:scroll;
+    background: lightblue;
     padding-bottom:150px;
 }
 
@@ -166,21 +168,23 @@ input[type=submit]:hover, a.button:hover {
 
 #chat-input {
     position:absolute;
-    bottom:0;
-    background:#efefef;
-    width:100%;
-    padding-top:20px;
+    /*ri*/
+    bottom:50%;
+    right: 10px;
+    /*background:#efefef;*/
+    width:25%;
+    /*padding-top:40px;*/
 }
 
 #chat-input input {
-    width:96%;
-    position: fixed;
-    float:left;
-    display:inline;
-    margin-left:2%;
-    margin-right:2%;
-    padding-left:0;
-    padding-right:0;
+    /*width:60%;*/
+    /*position: fixed;*/
+    /*float:left;*/
+    /*display:inline;*/
+    /*margin-left:2%;*/
+    /*margin-right:2%;*/
+    /*padding-left:10px;*/
+    /*padding-right:10px;*/
 }
 /**********************************/
 .my_button {

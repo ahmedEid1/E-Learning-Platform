@@ -29,10 +29,11 @@ urlpatterns = [
     # ---Course Views (Done)
     path('course/', include('courses.urls')),
     path('', CourseListView.as_view(), name='course_list'),
-    # ---Student Views (Current)
+    # ---Student Views (Done)
     path('students/', include('students.urls')),
-    # ---API >> Courses
+    # ---API >> Courses (Done)
     path('api/', include('courses.api.urls', namespace='api/')),
+    # ---the chat rooms for the courses
     path('chat/', include('chat.urls', namespace='chat/')),
 
 ]

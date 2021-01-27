@@ -13,7 +13,15 @@
 - Redis 
 - channels-redis
 ---
-## urls :
+
+<details>
+<summary>
+
+urls :
+
+</summary>
+
+
 - ### `/`
     - ##### `Courses List` 
         - view : `courses/views.py#CourseListView`
@@ -132,12 +140,34 @@
     - showing the contents of a course module
     - view : `StudentCourseDetailView`
     - template : `students/student/detail.html`
+---
+---
+## `chat/`
+- the chat rooms of courses
+- ### `room/<course_id>`
+    - view : `course_chat_room`
+    - template : `chat/room.html`
+
+----
+----
+## `api/`
+- ### the endpoints of the API 
+    - `subjects/`
+         - GET : return a list of all the subjects   
+    - `subjects/<subject_id>`
+         - GET : return the details of a subject   
+
+    - `courses`
+        - GET : list of all the course
+    - `courses/<course_id>`
+        - GEt : the details of a course
+    - `courses/<course_id>/enroll/`
+        - POST : enroll in a course
+---
+---
 
 
-
-
-
-
+</details>
 
 
 
