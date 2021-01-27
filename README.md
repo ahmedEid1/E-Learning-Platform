@@ -1,5 +1,7 @@
 ### Technologies
 <details>
+  <summary></summary>
+  
 - Django
 - django-braces
 - django-embed-video
