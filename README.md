@@ -1,4 +1,7 @@
 ### Technologies
+<details>
+  <summary></summary>
+  
 - Django
 - django-braces
 - django-embed-video
@@ -12,10 +15,14 @@
 - channels
 - Redis 
 - channels-redis
+
+</details>
+
 ---
 
+
 <h3>Images</h3>
-<details>
+<details open>
     <summary></summary>
 
 - Home Page
