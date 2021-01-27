@@ -15,7 +15,7 @@
 ---
 
 <h3>Images</h3>
-<details>
+<details open>
     <summary></summary>
 
 - Home Page
