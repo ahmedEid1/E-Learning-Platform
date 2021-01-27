@@ -15,11 +15,7 @@
 ---
 
 <details>
-<summary>
-
-urls :
-
-</summary>
+<summary><h3>urls :</h3></summary>
 
 
 - ### `/`
@@ -169,6 +165,18 @@ urls :
 
 </details>
 
+<details>
+    <summary><h3>Images</h3></summary>
 
+![Home Page](readme_images/1.PNG)
+![Course Enroll Page](readme_images/2.PNG)
+![course page](readme_images/3.PNG)
+![chat room](readme_images/4.PNG)
+![Teacher Courses](readme_images/5.PNG)
+![Student Courses](readme_images/6.PNG)
+![Api subjects List](readme_images/7.PNG)
+![Api Content of a course](readme_images/8.PNG)
+
+</details>
 
 
