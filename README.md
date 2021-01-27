@@ -2,7 +2,7 @@
 - Django
 - django-braces
 - django-embed-video
-- django-memcache-status
+- django-memcached-status
 - Django REST framework 
 - Jquery
 - jQuery UI
@@ -14,6 +14,56 @@
 - channels-redis
 ---
 
+<h3>Images</h3>
+<details>
+    <summary></summary>
+
+- Home Page
+![Home Page](readme_images/1.PNG)
+
+----
+---
+- Course Enroll Page
+![Course Enroll Page](readme_images/2.PNG)
+
+----
+---
+- course page
+![course page](readme_images/3.PNG)
+
+----
+---
+- chat room
+![chat room](readme_images/4.PNG)
+
+----
+---
+- Teacher Courses
+![Teacher Courses](readme_images/5.PNG)
+
+----
+---
+- Student Courses
+![Student Courses](readme_images/6.PNG)
+
+----
+---
+- Api subjects List
+![Api subjects List](readme_images/7.PNG)
+
+----
+---
+- Api Content of a course
+![Api Content of a course](readme_images/8.PNG)
+
+----
+---
+
+</details>
+
+
+
+----
 <h3>urls :</h3>
 <details>
 <summary></summary>
@@ -165,44 +215,4 @@
 
 
 </details>
-<h3>Images</h3>
-<details>
-    <summary></summary>
-
-![Home Page](readme_images/1.PNG)
-
-----
----
-
-![Course Enroll Page](readme_images/2.PNG)
-
-----
----
-![course page](readme_images/3.PNG)
-
-----
----
-![chat room](readme_images/4.PNG)
-
-----
----
-![Teacher Courses](readme_images/5.PNG)
-
-----
----
-![Student Courses](readme_images/6.PNG)
-
-----
----
-![Api subjects List](readme_images/7.PNG)
-
-----
----
-![Api Content of a course](readme_images/8.PNG)
-
-----
----
-
-</details>
-
 
