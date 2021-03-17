@@ -16,11 +16,15 @@
             </p>
             {{ object.overview|linebreaks }}
             {% if request.user.is_authenticated %}
-                <form action="{% url 'student_enroll_course'%}" method="post">
-                    {{ enroll_form }}
-                    {% csrf_token %}
-                    <input type="submit" value="Enroll now">
-                </form>
+                {% if request.user in object.students.all  %}
+                    <p><a class="button hover-style" style="color: black; padding: 10px" href="{% url 'student_course_detail' object.id %}">Access Contents</a></p>
+                {% else %}
+                    <form action="{% url 'student_enroll_course'%}" method="post">
+                        {{ enroll_form }}
+                        {% csrf_token %}
+                        <input type="submit" value="Enroll now">
+                    </form>
+                {% endif %}
             {% else %}
                 <a class="button hover-style" style="color: black; padding: 10px" href="{% url 'student_registration' %}">
                     Register to Enroll
