@@ -213,22 +213,6 @@ input[type=submit]:hover, a.button:hover {
    background: deepskyblue;
     border: 3px dashed beige;
 }
-
-.page-title {
-    position: absolute;
-    bottom: 90%;
-    right: 45%;
-    color: #fff;
-    text-transform: uppercase;
-    padding: 10px 50px;
-    border-radius: 11px;
-    display: inline-block;
-    border: 3px dashed beige;
-    transition: all 0.4s ease 0s;
-    background: deepskyblue;
-
-}
-
 .page-title:hover {
     background: #434343;
     letter-spacing: 1px;

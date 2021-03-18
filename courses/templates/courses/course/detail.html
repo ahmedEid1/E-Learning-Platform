@@ -1,7 +1,11 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block title %}{{ object.title }}{% endblock %}
-{% block style %}<link rel="stylesheet" href="{% static 'css/base.css' %}">{% endblock %}
+{% block style %}
+    <link rel="stylesheet" href="{% static 'base.css' %}">
+   <link href="{% static 'css/bootstrap.min.css' %}">
+   <link href="{% static 'css/bootstrap.css' %}">
+{% endblock %}
 
 {% block content %}
     {% with subject=object.subject %}

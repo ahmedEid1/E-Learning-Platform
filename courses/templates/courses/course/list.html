@@ -8,18 +8,15 @@
     {% endif %}
 {% endblock %}
 
-{% block style %}
-    <link rel="stylesheet" href="{% static 'css/base.css' %}">
-{% endblock %}
-
-{% block content %}
-    <div class="page-title">
+{% block page_title %}
         {% if subject %}
             {{ subject.title }} Courses
         {% else %}
             All Courses
         {% endif %}
-    </div>
+{% endblock %}
+
+{% block content %}
 
     <div class="contents hover-style">
         <h3 class="my_button">Subjects</h3>
@@ -61,4 +58,5 @@
             {% endwith %}
         {% endfor %}
     </div>
+
 {% endblock %}
