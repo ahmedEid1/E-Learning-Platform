@@ -231,11 +231,10 @@ input[type=submit]:hover, a.button:hover {
 .hover-style:hover {
     border-radius: 10px;
     padding: 10px;
-    background: #434343;
     letter-spacing: 1px;
     box-shadow: 5px 40px 10px rgba(0,0,0,0.57);
     transition: all 0.4s ease 0s;
-    color: deepskyblue;
+    color: gray;
 }
 /*******************************************/
 #header {
@@ -277,6 +276,7 @@ input[type=submit]:hover, a.button:hover {
     border-bottom-right-radius: 15px;
     border-top-right-radius: 15px;
 }
+
 
 .contents ul {
     list-style:none;
@@ -324,22 +324,22 @@ ul.content-types li {
 }
 /********************/
 
-ul#course-modules {
+#course-modules {
     list-style:none;
     overflow:auto;
 }
 
-ul#course-modules textarea {
+#course-modules textarea {
     width:600px;
     height:120px;
 }
 
-ul#course-modules li {
+#course-modules li {
     padding:20px;
     overflow:auto;
 }
 
-ul#course-modules li:hover {
+#course-modules li:hover {
     background:#ccc;
 }
 /****************************/
@@ -347,11 +347,11 @@ ul#course-modules li:hover {
 .module {
     padding:10px 20px;
     float:left;
-    width:600px;
-    background: darkgray;
-    border-right: 2px dashed black;
-    border-bottom: 2px dashed black;
-    border-radius: 5px;
+    width:80%;
+    background: white;
+    /*border-right: 2px dashed black;*/
+    /*border-bottom: 2px dashed black;*/
+    /*border-radius: 5px;*/
     color: black;
 }
 
@@ -373,6 +373,36 @@ ul#course-modules li:hover {
 }
 
 .module-content {
-    padding-left: 10px;
+    padding-left: 50px;
+    border: 1px solid black;
 }
 
+
+@media all and (max-width: 850px){
+    .contents {
+       display: block;
+        width: 100%;
+    }
+
+    .contents ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+    .contents ul li {
+        float: left;
+    }
+
+    .contents ul a {
+        display: inline;
+    }
+
+    .contents ul span {
+        display: none;
+    }
+/******************/
+    .module {
+        width: 100%;
+    }
+}
