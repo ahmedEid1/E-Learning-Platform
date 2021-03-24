@@ -3,18 +3,17 @@
 
 {% block title %}Delete Course{% endblock %}
 
-{% block style %}
-    <link rel="stylesheet" href="{% static 'css/../../../../static/base.css' %}">
+{% block page_title %}
+    Delete {{ object.title }}
 {% endblock %}
 
 {% block content %}
-    <div class="page-title">Deleting the course {{ object.title }}</div>
-
-    <div class="module shadow-style" style="margin: 20px 30%">
+    <div class="module shadow-style w-100">
         <form method="post">
             {% csrf_token %}
-            <p>you sure about deleting "{{ object }}" ?!!</p>
-            <p><input class="hover-style" style="color: white; background: red" type="submit" value="Confirm"></p>
+            <p class="display-5 text-danger">you sure about deleting "{{ object }}" ?!!</p>
+
+            <button class="btn btn-danger w-100" type="submit" value="Confirm">Confirm</button>
         </form>
 
     </div>

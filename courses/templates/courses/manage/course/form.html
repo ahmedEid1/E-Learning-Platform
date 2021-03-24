@@ -9,25 +9,24 @@
     {% endif %}
 {% endblock %}
 
-{% block style %}
-    <link href="{% static 'css/../../../../static/base.css' %}" rel="stylesheet">
-{% endblock %}
-
-{% block content %}
-    <div class="page-title">
-        {% if object %}
+{% block page_title %}
+    {% if object %}
         Edit {{ object.title }}
     {% else %}
         Create a new course
     {% endif %}
-    </div>
+{% endblock %}
 
-    <div class="module shadow-style" style="margin: 20px 30%;">
-        <h2 class="shadow-style">Course Info. </h2>
+{% block content %}
+
+
+    <div class="module shadow-style w-100">
+        <h2 class="display-5 text-primary">Course Info</h2>
         <form method="post">
             {{ form.as_p }}
             {% csrf_token %}
-            <p><input class="hover-style" style="color: black" type="submit" value="Save Course"></p>
+
+            <button class="btn btn-primary w-100" type="submit" value="Save Course">Save Course</button>
         </form>
     </div>
 {% endblock %}

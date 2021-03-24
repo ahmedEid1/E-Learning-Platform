@@ -4,19 +4,20 @@
 {% block title %}
     Edit {{ course.title }}
 {% endblock %}
-{% block style %}
-    <link href="{% static 'css/../../../../static/base.css' %}" rel="stylesheet">
+
+{% block page_title %}
+    Edit {{ course.title }}
 {% endblock %}
 
 {% block content %}
-    <div class="page-title">Edit {{ course.title }}</div>
-    <div class="module shadow-style" style="margin: 20px 30%;">
-        <h2 class="shadow-style">Course Modules</h2>
-        <form style="padding: 10px; margin: 10px;" method="post">
+    <div class="module shadow-style w-100 text-center text-white">
+        <h2 class="card display-5 bg-primary">Course Modules</h2>
+        <form class="form d-inline-block text-black-50" method="post">
             {% csrf_token %}
             {{ formset }}
             {{ formset.management_form }}
-            <input class="hover-style" style="color: #333333" type="submit" value="Save Module">
+
+            <input class="btn bg-primary" type="submit" value="Save Module">
         </form>
     </div>
 {% endblock %}
