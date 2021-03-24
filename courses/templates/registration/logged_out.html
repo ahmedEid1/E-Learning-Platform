@@ -1,16 +1,16 @@
 {% extends 'base.html' %}
 {% block title %}Logged Out{% endblock %}
 {% load static %}
-{% block style %}
-    <link href="{% static 'css/../../static/base.css' %}" rel="stylesheet">
+
+{% block page_title %}
+    Logged Out
 {% endblock %}
 
-
 {% block content %}
-    <div class="module" style="margin: 0 30%; padding: 10px;">
-        you have been successfully logged out
-        <div class="hover-style" style="padding: 5px;">
-            &#8594; You can <a href="{% url 'login' %}">Log In again</a>.
+    <div class="card w-100 text-center module">
+        <span class="display-6">you have been successfully logged out</span>
+        <div class="display-3">
+            &#8594; You can <a class="text-success hover-style" href="{% url 'login' %}">Log In again</a>.
         </div>
     </div>
 {% endblock %}

@@ -3,16 +3,17 @@
 
 {% block title %}Sign Up{% endblock %}
 
-{% block style %}<link rel="stylesheet" href="{% static 'css/../../../../courses/static/base.css' %}">{% endblock %}
+{% block page_title %}
+    Sign Up
+{% endblock %}
 
 {% block content %}
-    <div class="page-title">Sign Up</div>
-    <div class="module shadow-style" style="margin: 10px 30%; background: white">
-        <h2>Enter you details to create a student account</h2>
-        <form method="post">
+    <div class="module shadow-style w-100">
+        <h2 class="card p-4 text-center text-white bg-primary">Enter you details to create a student account</h2>
+        <form class="form" method="post">
             {{ form.as_p }}
             {% csrf_token %}
-            <p><input class="hover-style" style="color: #333333" type="submit" value="Create the account"></p>
+            <p><input class="bg-primary" type="submit" value="Create the account"></p>
         </form>
     </div>
 {% endblock %}
