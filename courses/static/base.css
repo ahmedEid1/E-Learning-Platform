@@ -130,35 +130,18 @@ input[type=submit]:hover, a.button:hover {
     padding-left:20px;
 }
 
-#chat {
-    top: 100px;
-    bottom:20%;
-    position:fixed;
-    width:80%;
-    height: 60%;
-    overflow-y:scroll;
-    background: lightblue;
-    padding-bottom:150px;
-}
-
 #chat .message {
     background:#efefef;
     padding:10px 20px;
     border-radius:4px;
-    width:auto;
+    width: 50%;
     display:inline;
-    float:left;
     margin:10px 10px 0;
-    min-width:440px;
     clear:both;
+    word-break: break-all;
 }
 
-#chat .message.me {
-    display:inline;
-    float:right;
-    background:#DCEDE0;
-    color:deepskyblue;
-}
+
 
 #chat .date {
     color:#aaa;
@@ -166,26 +149,6 @@ input[type=submit]:hover, a.button:hover {
     font-size:12px;
 }
 
-#chat-input {
-    position:absolute;
-    /*ri*/
-    bottom:50%;
-    right: 10px;
-    /*background:#efefef;*/
-    width:25%;
-    /*padding-top:40px;*/
-}
-
-#chat-input input {
-    /*width:60%;*/
-    /*position: fixed;*/
-    /*float:left;*/
-    /*display:inline;*/
-    /*margin-left:2%;*/
-    /*margin-right:2%;*/
-    /*padding-left:10px;*/
-    /*padding-right:10px;*/
-}
 /**********************************/
 .my_button {
     user-select: none;

@@ -41,7 +41,7 @@
                     <form action="{% url 'student_enroll_course'%}" method="post">
                         {{ enroll_form }}
                         {% csrf_token %}
-                        <input class="btn btn-success" type="submit" value="Enroll now">
+                        <button class="btn btn-primary w-100" type="submit" value="Enroll Now">Enroll Now</button>
                     </form>
                 {% endif %}
             {% else %}
