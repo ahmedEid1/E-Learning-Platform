@@ -3,24 +3,31 @@
 
 {% block title %}{% endblock %}
 
-{% block style %}
-    <link href="{% static 'css/../../../../static/base.css' %}" rel="stylesheet">
-{% endblock %}
-
-{% block content %}
-    <div class="page-title">
+{% block page_title %}
         {% if object %}
             Edit {{ object.title }}
         {% else %}
             Add a new content
         {% endif %}
-    </div>
+{% endblock %}
 
-    <div class="module shadow-style" style="margin: 10px 30%">
-        <form action="" method="post" enctype="multipart/form-data">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <p><input class="hover-style" style="color: black;" type="submit" value="Save Content"></p>
-        </form>
-    </div>
+{% block content %}
+
+    <div class="w-100 module shadow-style">
+        <div class="row h-100 justify-content-center align-items-center">
+            <form  action="" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                {% for field in form %}
+                    {{ field.errors }}
+                    <p>{{ field.label_tag }}</p>
+                    <p class="text-black-50">{{ field }}</p>
+                    {% if field.help_text %}
+                        {{ field.help_text|safe }}
+                     {% endif %}
+                {% endfor %}
+                <p><button class="btn btn-primary" type="submit" value="Save Content">Save Content</button></p>
+         </form>
+      </div>
+  </div>
+
 {% endblock %}

@@ -376,7 +376,9 @@ ul.content-types li {
     padding-left: 50px;
     border: 1px solid black;
 }
-
+#add-nav {
+        width: 20%;
+}
 
 @media all and (max-width: 850px){
     .contents {
@@ -405,4 +407,8 @@ ul.content-types li {
     .module {
         width: 100%;
     }
+    #add-nav {
+        width: 40%;
+    }
+
 }
