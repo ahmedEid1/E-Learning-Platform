@@ -1,6 +1,6 @@
 ### Technologies
 <details>
-  <summary></summary>
+  <summary>Tech list</summary>
   
 - Django
 - django-braces
@@ -19,59 +19,12 @@
 </details>
 
 ---
-
-
-<h3>Images</h3>
-<details open>
-    <summary></summary>
-
-- Home Page
-![Home Page](readme_images/1.PNG)
-
 ----
----
-- Course Enroll Page
-![Course Enroll Page](readme_images/2.PNG)
-
-----
----
-- course page
-![course page](readme_images/3.PNG)
-
-----
----
-- chat room
-![chat room](readme_images/4.PNG)
-
-----
----
-- Teacher Courses
-![Teacher Courses](readme_images/5.PNG)
-
-----
----
-- Student Courses
-![Student Courses](readme_images/6.PNG)
-
-----
----
-- Api subjects List
-![Api subjects List](readme_images/7.PNG)
-
-----
----
-- Api Content of a course
-![Api Content of a course](readme_images/8.PNG)
-
-----
----
-
-</details>
-
-
-
-----
-<h3>urls :</h3>
+<h3>
+urls and their views and templates 
+<br>(simple map for myself, you do not need to open it)
+<br>(seriously do not open it)
+</h3>
 <details>
 <summary></summary>
 
@@ -223,3 +176,127 @@
 
 </details>
 
+
+---
+- ### `/`
+    - ##### `Courses List` 
+              
+        <details>
+
+        - all the courses and a list of all the subjects to only show courses belonging to this Subject
+            - every subject has the number of courses it has
+            - evert course card show :
+                - subject the course belong to
+                - number of modules in the course
+                - name of the Instructor
+      
+        </details>
+
+![Home Page](readme_gifs/Main_page_gif.gif)
+-----
+----
+- ### `/accounts`
+    - `/login` :
+        - login page
+    - `/logout` :
+        - logout page 
+    
+![log in and out](readme_gifs/log_in_out_gif.gif)
+---
+----
+- ### `/admin` 
+    - need to be a superuser to access the admin panel
+    - only a superuser can add new subjects or make a user a teacher by giving them the right permission
+        - `a teacher can add new courses and add modules and content to the courses he owns`
+
+![admin](readme_gifs/admin_gif.gif)
+----
+---
+- ### `course/`
+  <details>
+   
+    - #### `mine/` (Login Require)
+      - list of the courses the user (teacher) created
+          - can edit the course, 
+          - edit its modules, 
+          - manging the content of a module,
+          - deleting a course,
+          - creating a new course,
+    - #### `create/` (Login Require)
+      - create a new course
+    - #### `<course_id>/edit/` (Login Require)
+      - edit the info of an existing course
+    - #### `<course_id>/delete/` (Login Require)
+      - delete an existing course
+    - #### `<course_id>/module/` (Login Require)
+      - adding, editing and deleting modules of a course
+    - #### `module/<course_id>/` (Login Require)
+      - adding, editing and deleting content of a module in the course
+    - #### `module/<module_id>/content/<content_type>/create/` (Login Require)
+      - adding a new content (text, image, video, file) to the module
+    - #### `module/<module_id>/content/<content_type>/<content_id>/` (Login Require)
+      - editing a content item (text, image, video, file) from the module content
+    - #### `content/<content_id>/delete` (Login Require)
+        - deleting a content item from the module
+  
+    </details>
+
+![Courses](readme_gifs/Courses_gif.gif)
+
+---
+- #### Note :
+    - `you can reorder the contents, or the modules 
+            - just click and hold then drag to change the order`
+----
+
+![Drag and Drop](readme_gifs/Drag_and_drop_gif.gif)
+
+----
+----
+
+- ### `/students` :
+    
+    <details>
+  
+    - #### `register/` :
+        - create a new user account
+    - #### `courses/` : (Login Require)
+        - list of all the courses the user is enrolled in
+    - #### `courses/<course_id>/` : (Login Require)
+        - course detail page + course chat room 
+    - #### `courses/<course_id>/<module_id>` : (Login Require) 
+        - showing the contents of a course module
+
+    </details>
+
+
+![Student](readme_gifs/student_gif.gif)
+
+---
+---
+## `chat/`
+- the chat rooms of courses
+- ### `room/<course_id>`
+
+![chat](readme_gifs/chat_gift.gif)
+
+----
+----
+## `api/`
+- ### the endpoints of the API 
+    - `subjects/`
+         - GET : return a list of all the subjects   
+    - `subjects/<subject_id>`
+         - GET : return the details of a subject
+    - `courses`
+        - GET : list of all the course
+    - `courses/<course_id>`
+        - GEt : the details of a course
+    - `courses/<course_id>/enroll/`
+        - POST : enroll in a course
+
+![Api subjects List](readme_gifs/7.PNG)
+![Api Content of a course](readme_gifs/8.PNG)
+
+---
+---
