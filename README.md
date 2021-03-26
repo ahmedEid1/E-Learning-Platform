@@ -1,3 +1,26 @@
+### why my project  satisfies the distinctiveness and complexity requirements, 
+- my project is an e-learning platform which is nothing like the project I worked on during the course
+- my website have utilized Django for the backend and use js and jquery on the frontend
+- my change layout depending on the screen size
+---
+
+### What’s contained in each file I created.
+- e-learning_platform :
+    - the main app of the Application
+- courses :
+    - this app responsible for creating the courses and handling CRUD operations on them
+    - it also has a simple api for enable working with the site through api consumers 
+- students:
+    - this app handle the student enrollment into courses and displaying the content of the courses to students
+- chat:
+    - handle a live chat for every course 
+---
+### How to run your application.
+- you will need to have `Redis` server running
+- run `pip install requirements.txt`
+- then you can start the server with
+    - `python manage.py runserver`
+
 ### Technologies
 <details>
   <summary>Tech list</summary>
